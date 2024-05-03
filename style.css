@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  font-family: sans-serif;
+  font-family: 18px;
+
+  background: #deface;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.box {
+  width: 500px;
+  border-radius: 6px;
+  background: white;
+  padding: 1.6em 2em;
+}
