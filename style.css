@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -7,6 +11,8 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  gap: 18px;
 
   font-family: sans-serif;
   font-family: 18px;
@@ -31,8 +37,23 @@ p {
 }
 
 .box {
-  width: 500px;
   border-radius: 6px;
   background: white;
   padding: 1.6em 2em;
+}
+
+.goals {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  padding-left: 2.6em;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ol li:not(:last-of-type) {
+  margin-bottom: 1em;
 }
