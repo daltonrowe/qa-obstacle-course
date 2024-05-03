@@ -6,5 +6,28 @@
     <title>Level Two</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <ol class="box goals">
+      <li>Assert there is a button with text "Click Me!".</li>
+      <li>Assert clicking the button changes the text below.</li>
+      <li>Assert that after clicking there is a link going to "/level3".</li>
+    </ol>
+
+    <button>Click Me!</button>
+    <pre>I'm waiting...</pre>
+
+    <script>
+      const button = document.querySelector("button");
+      const pre = document.querySelector("pre");
+
+      button.addEventListener("click", () => {
+        pre.textContent = "Ah I've been clicked!";
+
+        const link = document.createElement("A");
+        link.textContent = "Proceed";
+        link.href = "/level3";
+        document.body.appendChild(link);
+      });
+    </script>
+  </body>
 </html>
