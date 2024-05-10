@@ -8,3 +8,17 @@ Each level explores new concepts getting more difficult, specific and challenges
 
 https://playwright.dev/docs/test-assertions
 https://playwright.dev/docs/locators
+
+### Concepts
+
+- Page title contents
+- Element text contents
+- Link url value
+- Clicking
+- Element text contents after interaction
+- Element attachment after interaction
+- Counting elements
+- Text input value
+- Select value
+- Input disabled
+- Hidden elements

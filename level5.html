@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Level Five</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- hidden elements -->
+
+    <ol class="box goals">
+      <li>Assert there is a hidden element with an id of "not-me".</li>
+      <li>Click the button.</li>
+      <li>Assert the element is id "not-me" is visible.</li>
+    </ol>
+
+    <div id="not-me" style="display: none">🫣</div>
+
+    <button id="reveal">🕵️</button>
+
+    <a href="level6">Onwards</a>
+
+    <script>
+      const reveal = document.querySelector("#reveal");
+      const notMe = document.querySelector("#not-me");
+
+      reveal.addEventListener("click", () => {
+        notMe.removeAttribute("style");
+      });
+    </script>
+  </body>
+</html>
