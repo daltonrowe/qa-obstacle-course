@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Level Eight</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      select {
+        width: 150px;
+      }
+
+      select[multiple] {
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- select, multi select -->
+
+    <ol class="box goals">
+      <li>
+        Set the first select's value to "hamburger", assert the text "Yummy" is
+        present.
+      </li>
+      <li>
+        Set the second select's value to "cheese", assert the text is "Even
+        better"
+      </li>
+      <li>
+        Set the third select's value to "lettuce", "tomato", and "onion". Assert
+        the text is "Just how I like it!"
+      </li>
+    </ol>
+
+    <select>
+      <option value="taco">Taco</option>
+      <option value="pizza">Pizza</option>
+      <option value="hamburger">Hamburger</option>
+    </select>
+
+    <select multiple>
+      <option value="plain">Plain</option>
+      <option value="cheese">Cheese</option>
+      <option value="double">Double</option>
+    </select>
+
+    <select multiple>
+      <option value="lettuce">Lettuce</option>
+      <option value="ketchup">Ketchup</option>
+      <option value="mustard">Mustard</option>
+      <option value="tomato">Tomato</option>
+      <option value="pickle">Pickle</option>
+      <option value="onion">Onion</option>
+    </select>
+
+    <pre>...</pre>
+
+    <a href="level8">Once more!</a>
+
+    <script>
+      const goals = [false, false, false];
+
+      const select1 = document.querySelector("select:nth-of-type(1)");
+      const select2 = document.querySelector("select:nth-of-type(2)");
+      const select3 = document.querySelector("select:nth-of-type(3)");
+
+      const pre = document.querySelector("pre");
+
+      select1.addEventListener("input", () => {
+        goals[0] = select1.value === "hamburger";
+        checkGoals();
+      });
+
+      select2.addEventListener("input", () => {
+        goals[1] = select2.value === "cheese";
+        checkGoals();
+      });
+
+      select3.addEventListener("input", () => {
+        const values = Array.from(
+          select3.querySelectorAll("option:checked")
+        ).map((selected) => {
+          return selected.value;
+        });
+
+        goals[2] =
+          values.length === 3 &&
+          values.every((value) =>
+            ["lettuce", "tomato", "onion"].includes(value)
+          );
+
+        checkGoals();
+      });
+
+      const checkGoals = () => {
+        let total = 0;
+
+        goals.forEach((goal) => {
+          if (goal === true) total++;
+        });
+
+        switch (total) {
+          case 1:
+            pre.textContent = "Yummy";
+            break;
+
+          case 2:
+            pre.textContent = "Even better";
+            break;
+
+          case 3:
+            pre.textContent = "Just how I like it!";
+            break;
+
+          default:
+            pre.textContent = "...";
+            break;
+        }
+      };
+    </script>
+  </body>
+</html>

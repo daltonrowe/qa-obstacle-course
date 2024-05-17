@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Level Seven</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- focus, blur, input -->
+
+    <ol class="box goals">
+      <li>Focus the input, assert the text "Focusing" is on the page.</li>
+      <li>
+        Blur (unfocus) the input, assert the text "Blurred" is on the page.
+      </li>
+      <li>
+        Insert "4321" into the input, assert the text "Woo hoo!" is on the page.
+      </li>
+    </ol>
+
+    <input type="number" />
+
+    <pre>...</pre>
+
+    <a href="level8">Once more!</a>
+
+    <script>
+      const input = document.querySelector("input");
+      const pre = document.querySelector("pre");
+
+      input.addEventListener("focus", () => {
+        pre.textContent = "Focusing";
+      });
+
+      input.addEventListener("blur", () => {
+        pre.textContent = "Blurred";
+      });
+
+      input.addEventListener("input", () => {
+        if (input.value === "4321") pre.textContent = "Woo hoo!";
+      });
+    </script>
+  </body>
+</html>

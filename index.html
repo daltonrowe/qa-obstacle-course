@@ -5,18 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QA Obstacle Course</title>
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+      #welcome {
+        max-width: 500px;
+      }
+
+      #levels {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      #levels a {
+        border: 1px solid grey;
+        padding: 10px;
+        border-radius: 6px;
+      }
+    </style>
   </head>
   <body>
-    <div class="box stack">
+    <div id="welcome" class="box stack">
       <h1>Welcome!</h1>
 
       <p>
         The pages on this site are intended as QA automation practice tests.
       </p>
 
-      <a href="level1">Level 1</a>
-      <a href="level2">Level 2</a>
-      <a href="level3">Level 3</a>
+      <div id="levels">
+        <a href="level1">Level 1</a>
+        <a href="level2">Level 2</a>
+        <a href="level3">Level 3</a>
+        <a href="level4">Level 4</a>
+        <a href="level5">Level 5</a>
+        <a href="level6">Level 6</a>
+        <a href="level7">Level 7</a>
+      </div>
     </div>
   </body>
 </html>

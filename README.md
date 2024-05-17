@@ -22,3 +22,4 @@ https://playwright.dev/docs/locators
 - Select value
 - Input disabled
 - Hidden elements
+- Selecting parents
