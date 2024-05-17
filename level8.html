@@ -68,22 +68,29 @@
 
       const pre = document.querySelector("pre");
 
+      function getSelectValues(select) {
+        return Array.from(select.querySelectorAll("option:checked")).map(
+          (selected) => {
+            return selected.value;
+          }
+        );
+      }
+
       select1.addEventListener("input", () => {
         goals[0] = select1.value === "hamburger";
         checkGoals();
       });
 
       select2.addEventListener("input", () => {
-        goals[1] = select2.value === "cheese";
+        const values = getSelectValues(select2);
+
+        goals[1] =
+          values.length === 1 && values.every((value) => value === "cheese");
         checkGoals();
       });
 
       select3.addEventListener("input", () => {
-        const values = Array.from(
-          select3.querySelectorAll("option:checked")
-        ).map((selected) => {
-          return selected.value;
-        });
+        const values = getSelectValues(select3);
 
         goals[2] =
           values.length === 3 &&
