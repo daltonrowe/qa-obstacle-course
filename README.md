@@ -23,3 +23,17 @@ https://playwright.dev/docs/locators
 - Input disabled
 - Hidden elements
 - Selecting parents
+
+#### To Do
+
+- Breakpoints
+- Does not have scroll bar
+- Div overlaying element / force click / programmatic click
+- Fill vs sequential typing
+- Uploading
+- Drag and drop
+- Mouse position
+- API response
+- Setting cookies
+- Setting / asserting local storage
+- Accessibilty testing
