@@ -9,27 +9,42 @@
     <style>
       #welcome {
         max-width: 500px;
+        text-align: center;
       }
 
       #levels {
-        display: flex;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
         flex-wrap: wrap;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.2);
+        overflow: hidden;
       }
 
       #levels a {
-        border: 1px solid grey;
-        padding: 10px;
-        border-radius: 6px;
+        background: rgba(2, 0, 36, 0.9);
+        padding: 1em;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      #levels a:hover {
+        background: rgba(2, 0, 36, 0.7);
       }
     </style>
   </head>
   <body>
     <div id="welcome" class="box stack">
-      <h1>Welcome!</h1>
+      <h1>
+        Welcome to the
+        <div class="color">QA Obstacle Course!</div>
+      </h1>
 
       <p>
-        The pages on this site are intended as QA automation practice tests.
+        Each page on this site is a QA automation practice test, designed to
+        help explore new concepts and assertations in QA automation.
       </p>
 
       <div id="levels">
@@ -42,6 +57,8 @@
         <a href="level7">Level 7</a>
         <a href="level8">Level 8</a>
       </div>
+
+      <p>Set a timer and see how far you can get in 45 minutes!</p>
     </div>
   </body>
 </html>

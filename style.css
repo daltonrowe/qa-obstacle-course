@@ -14,10 +14,17 @@ body {
 
   gap: 18px;
 
-  font-family: sans-serif;
+  font-family: system-ui, -apple-system, "system-ui", "Segoe UI", Roboto,
+    sans-serif;
   font-family: 18px;
 
-  background: #deface;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(65deg, rgb(2, 1, 21) 0%, rgba(9, 9, 121, 1) 100%);
+  color: white;
+}
+
+a {
+  color: white;
 }
 
 h1,
@@ -30,6 +37,25 @@ p {
   margin: 0;
 }
 
+h1 div.color {
+  background-image: linear-gradient(
+    135deg,
+    #7aa8ff 0%,
+    #8bf2fe 33.33%,
+    #7affad 66.67%,
+    #c3f8c3 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  color: #7c7cc0;
+  line-height: 1.7em;
+}
+
 .stack {
   display: flex;
   flex-direction: column;
@@ -38,15 +64,18 @@ p {
 
 .box {
   border-radius: 6px;
-  background: white;
-  padding: 1.6em 2em;
+  background: rgb(2, 0, 36, 0.3);
+  padding: 3em;
+  border: 1px solid rgba(9, 9, 121, 1);
+  backdrop-filter: blur(10px);
 }
 
 .goals {
   position: absolute;
   top: 18px;
   left: 18px;
-  padding-left: 2.6em;
+  padding: 2em 3.5em;
+  max-width: calc(100% - 18px * 2);
 }
 
 ol {
@@ -56,4 +85,12 @@ ol {
 
 ol li:not(:last-of-type) {
   margin-bottom: 1em;
+}
+
+li {
+  color: #7c7cc0;
+}
+
+button {
+  cursor: pointer;
 }

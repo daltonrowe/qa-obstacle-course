@@ -25,10 +25,13 @@
       button.addEventListener("click", () => {
         pre.textContent = "Ah I've been clicked!";
 
-        const link = document.createElement("A");
-        link.textContent = "Proceed";
-        link.href = "/level3";
-        document.body.appendChild(link);
+        if (!document.querySelector("a#proceed")) {
+          const link = document.createElement("A");
+          link.id = "proceed";
+          link.textContent = "Proceed";
+          link.href = "/level3";
+          document.body.appendChild(link);
+        }
       });
     </script>
   </body>
