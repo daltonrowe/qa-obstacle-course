@@ -23,6 +23,8 @@ https://playwright.dev/docs/locators
 - Input disabled
 - Hidden elements
 - Selecting parents
+- Clearing inputs
+- Readonly inputs
 
 #### To Do
 
