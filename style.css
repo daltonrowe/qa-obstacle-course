@@ -1,5 +1,19 @@
+:root {
+  --transdblue: rgba(2, 0, 36, 0.85);
+  --transdblue-hover: rgba(2, 0, 36, 0.6);
+  --dblue: #020115;
+  --blue: #090979;
+
+  --lgreen: #abeff6;
+  --transgreen: #9efcbc33;
+}
+
 * {
   box-sizing: border-box;
+}
+
+html {
+  background-color: var(--dblue);
 }
 
 body {
@@ -16,15 +30,13 @@ body {
 
   font-family: system-ui, -apple-system, "system-ui", "Segoe UI", Roboto,
     sans-serif;
-  font-family: 18px;
 
-  background: rgb(2, 0, 36);
-  background: linear-gradient(65deg, rgb(2, 1, 21) 0%, rgba(9, 9, 121, 1) 100%);
+  background: linear-gradient(65deg, var(--dblue) 0%, var(--blue) 100%);
   color: white;
 }
 
 a {
-  color: #abeff6;
+  color: var(--lgreen);
 }
 
 h1,
@@ -35,6 +47,46 @@ h5,
 h6,
 p {
   margin: 0;
+}
+
+#welcome {
+  width: 500px;
+  max-width: 90%;
+  text-align: center;
+}
+
+#levels {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  flex-wrap: wrap;
+  border-radius: 12px;
+  border: 1px solid var(--transgreen);
+  background-image: linear-gradient(
+    135deg,
+    #7aa8ff12 0%,
+    #8bf2fe2d 33.33%,
+    #7affad2e 66.67%,
+    #c3f8c32a 100%
+  );
+  overflow: hidden;
+}
+
+@media (max-width: 1000px) {
+  #levels {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+#levels a {
+  background-color: var(--transdblue);
+  padding: 1em;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+#levels a:hover {
+  background-color: var(--transdblue-hover);
 }
 
 h1 div.color {
@@ -65,7 +117,7 @@ p {
 
 .box {
   border-radius: 6px;
-  background: rgb(2, 0, 36, 0.3);
+  background: rgb(6, 9, 49, 0.9);
   padding: 3em;
   border: 1px solid rgba(9, 9, 121, 1);
   backdrop-filter: blur(10px);
