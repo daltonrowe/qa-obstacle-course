@@ -4,6 +4,13 @@ Practice tests for your QA automation suite of choice, with the goal of helping 
 
 Each level explores new concepts getting more difficult, specific and challenges as you go.
 
+## Run Tests Locally
+
+```bash
+npm install
+LOCAL=1 npm run test
+```
+
 ## Test Ideas
 
 https://playwright.dev/docs/test-assertions
