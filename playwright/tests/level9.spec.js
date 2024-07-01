@@ -1,5 +1,5 @@
 // @ts-check
-const { test, expect } = require('@playwright/test');
+import { test, expect } from "@playwright/test";
 
 test('has correct text after select options set', async ({ page }) => {
   await page.goto('level9');

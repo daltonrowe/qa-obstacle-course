@@ -1,5 +1,5 @@
 // @ts-check
-const { defineConfig, devices } = require('@playwright/test');
+import { defineConfig, devices } from '@playwright/test';
 
 /**
  * Read environment variables from file.
@@ -13,7 +13,7 @@ const { defineConfig, devices } = require('@playwright/test');
 
 const PORT = process.env.LOCAL ? 9898 : 3000;
 
-module.exports = defineConfig({
+export default defineConfig({
   testDir: './playwright/tests',
   /* Run tests in files in parallel */
   fullyParallel: true,

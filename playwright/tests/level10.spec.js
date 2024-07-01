@@ -1,5 +1,5 @@
 // @ts-check
-const { test, expect } = require('@playwright/test');
+import { test, expect } from "@playwright/test";
 
 test('has visible divs with the correct attributes', async ({ page }) => {
   await page.goto('level10');
