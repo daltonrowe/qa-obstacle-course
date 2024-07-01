@@ -3,21 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Level Two</title>
+
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+
+    <title>Level 2</title>
+    <meta
+      name="description"
+      content="clicking elements, finding dynamic elements"
+    />
   </head>
   <body>
-    <!-- clicking elements, finding dynamic elements -->
-
     <ol class="box goals">
       <li>Assert there is a button with text "Click Me!".</li>
-      <li>Assert clicking the button changes the text below.</li>
-      <li>Assert that after clicking there is a link going to "/level3".</li>
+      <li>Assert the "pre" element has text "I'm waiting..."</li>
+      <li>Assert clicking the button changes the "pre" text.</li>
     </ol>
 
     <button>Click Me!</button>
     <pre>I'm waiting...</pre>
+
+    <a href="level3">Proceed</a>
 
     <script>
       const button = document.querySelector("button");
@@ -25,14 +31,6 @@
 
       button.addEventListener("click", () => {
         pre.textContent = "Ah I've been clicked!";
-
-        if (!document.querySelector("a#proceed")) {
-          const link = document.createElement("A");
-          link.id = "proceed";
-          link.textContent = "Proceed";
-          link.href = "/level3";
-          document.body.appendChild(link);
-        }
       });
     </script>
   </body>
