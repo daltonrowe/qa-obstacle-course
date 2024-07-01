@@ -10,6 +10,9 @@
   --transgreen: #9efcbc33;
 
   --lpurple: #7c7cc0;
+
+  --radius-sm: 6px;
+  --radius-lg: 12px;
 }
 
 * {
@@ -124,7 +127,7 @@ p {
 }
 
 .box {
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   background: var(--transdblue-hover);
   padding: 3em;
   border: 1px solid var(--transblue);
@@ -154,4 +157,17 @@ li {
 
 button {
   cursor: pointer;
+}
+
+body > a[href^="level"] {
+  background: var(--transdblue-hover);
+  padding: 10px 24px;
+  border-radius: 24px;
+  text-decoration: none;
+  border: 1px solid var(--transblue);
+  transition: background-color 0.15s ease;
+}
+
+body > a[href^="level"]:hover {
+  background-color: var(--transdblue);
 }
