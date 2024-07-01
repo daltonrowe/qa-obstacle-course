@@ -28,5 +28,18 @@ hrefs.forEach((_href, index) => {
 
     const goals = page.locator(".box.goals");
     await expect(goals).toBeVisible();
+
+    const lis = goals.locator('li');
+    for (const li of await lis.elementHandles()) {
+      const liText = await li.textContent() || '';
+      const cleanLiText = liText.replace("\n", '').trim().slice(-1)
+      await expect(cleanLiText.slice(-1)).toBe('.')
+    }
   });
+})
+
+test('has spec file for each level', async () => {
+  const allSpecs = fs.readdirSync('./playwright/tests')
+  const levelSpecs = allSpecs.filter(file => file.startsWith('level'));
+  await expect(levelSpecs.length).toEqual(hrefs.length)
 })
