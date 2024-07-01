@@ -2,8 +2,9 @@
   "name": "playwright",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "serve ./public",
+    "dev": "node --watch server.js",
     "test": "playwright test",
     "headed": "playwright test --headed",
     "ci": "CI=1 playwright test"
@@ -15,6 +16,6 @@
   "devDependencies": {
     "@playwright/test": "^1.44.1",
     "@types/node": "^20.14.2",
-    "serve": "^14.2.3"
+    "express": "^4.19.2"
   }
 }
