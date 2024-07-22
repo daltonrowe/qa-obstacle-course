@@ -2,6 +2,11 @@ import * as fs from "fs"
 import express from 'express'
 const app = express()
 
+app.use(express.json());
+app.use(express.urlencoded({
+  extended: true
+}));
+
 const portFlagIndex = process.argv.findIndex(item => item === '--port');
 const port = portFlagIndex !== -1 ? process.argv[portFlagIndex + 1] : 3000
 

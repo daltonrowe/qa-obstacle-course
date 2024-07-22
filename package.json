@@ -4,9 +4,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "node --watch server.js",
+    "dev": "node --watch server.js --port 9898",
     "start": "node server.js",
-    "test": "playwright test",
+    "test": "LOCAL=1 playwright test",
     "headed": "playwright test --headed",
     "ci": "CI=1 playwright test"
   },
