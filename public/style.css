@@ -151,6 +151,11 @@ ol li:not(:last-of-type) {
   margin-bottom: 1em;
 }
 
+.goals pre {
+  background: #222;
+  padding: 10px;
+}
+
 li {
   color: var(--lpurple);
 }

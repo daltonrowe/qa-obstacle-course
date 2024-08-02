@@ -30,10 +30,17 @@ hrefs.forEach((_href, index) => {
     await expect(goals).toBeVisible();
 
     const lis = goals.locator('li');
-    for (const li of await lis.elementHandles()) {
+
+    for (const li of await lis.all()) {
+      // skip when goals contains code blocks
+      const hasPre = (await li.locator("pre").count()) !== 0
+
       const liText = await li.textContent() || '';
       const cleanLiText = liText.replace("\n", '').trim().slice(-1)
-      await expect(cleanLiText.slice(-1)).toBe('.')
+
+      if (!hasPre) {
+        await expect(cleanLiText.slice(-1)).toBe('.')
+      }
     }
   });
 })
