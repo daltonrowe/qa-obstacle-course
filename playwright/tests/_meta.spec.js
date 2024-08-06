@@ -26,8 +26,11 @@ hrefs.forEach((_href, index) => {
     await expect(icon).toHaveCount(1)
     await expect(icon).toHaveAttribute('href', 'favicon.svg')
 
-    const goals = page.locator(".box.goals");
+    const goals = page.locator(".goals");
     await expect(goals).toBeVisible();
+
+    const task = page.locator(".task");
+    await expect(task).toBeVisible();
 
     const lis = goals.locator('li');
 

@@ -28,20 +28,22 @@
     </style>
   </head>
   <body>
-    <ol class="box goals">
+    <ol class="goals">
       <li>Select the parent of the element with an id of "child".</li>
       <li>Click the parent element.</li>
       <li>Assert the child is no longer in the DOM.</li>
     </ol>
 
-    <section></section>
-    <section>
-      <pre id="child">I'm the child!</pre>
-    </section>
-    <section></section>
-    <section></section>
+    <div class="task">
+      <section></section>
+      <section>
+        <pre id="child">I'm the child!</pre>
+      </section>
+      <section></section>
+      <section></section>
 
-    <a href="level7">Once more!</a>
+      <a href="level7">Once more!</a>
+    </div>
 
     <script>
       const section = document.querySelector("section:nth-of-type(2)");

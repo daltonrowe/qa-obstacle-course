@@ -14,16 +14,18 @@
     />
   </head>
   <body>
-    <ol class="box goals">
+    <ol class="goals">
       <li>Assert there is a button with text "Click Me!".</li>
       <li>Assert the "pre" element has text "I'm waiting...".</li>
       <li>Assert clicking the button changes the "pre" text.</li>
     </ol>
 
-    <button>Click Me!</button>
-    <pre>I'm waiting...</pre>
+    <div class="task">
+      <button>Click Me!</button>
+      <pre>I'm waiting...</pre>
 
-    <a href="level3">Proceed</a>
+      <a href="level3">Proceed</a>
+    </div>
 
     <script>
       const button = document.querySelector("button");

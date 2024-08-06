@@ -11,20 +11,22 @@
     <meta name="description" content="accessible names and labels" />
   </head>
   <body>
-    <ol class="box goals">
+    <ol class="goals">
       <li>Assert h1 has the role of "banner".</li>
       <li>Assert the button has an accessible name of "Just testing".</li>
       <li>Assert the pre element has an accessible name of "Taco Emoji".</li>
     </ol>
 
-    <h1 role="banner">Yo yo!</h1>
+    <div class="task">
+      <h1 role="banner">Yo yo!</h1>
 
-    <button aria-label="Just testing">Hey hey!</button>
+      <button aria-label="Just testing">Hey hey!</button>
 
-    <pre aria-labelledby="label1 label2">🌮</pre>
-    <div id="label1">Taco</div>
-    <div id="label2">Emoji</div>
+      <pre aria-labelledby="label1 label2">🌮</pre>
+      <div id="label1">Taco</div>
+      <div id="label2">Emoji</div>
 
-    <a href="level13">nächste</a>
+      <a href="level13">nächste</a>
+    </div>
   </body>
 </html>

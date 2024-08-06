@@ -28,13 +28,6 @@ body {
   padding: 0;
   min-height: 100vh;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  gap: 18px;
-
   font-family: system-ui, -apple-system, "system-ui", "Segoe UI", Roboto,
     sans-serif;
 
@@ -54,6 +47,13 @@ h5,
 h6,
 p {
   margin: 0;
+}
+
+.center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #welcome {
@@ -134,12 +134,43 @@ p {
   backdrop-filter: blur(10px);
 }
 
+.task {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3em;
+
+  gap: 18px;
+}
+
 .goals {
-  position: absolute;
-  top: 18px;
-  left: 18px;
-  padding: 2em 3.5em;
-  max-width: calc(100% - 18px * 2);
+  padding: 3em;
+  background: var(--transdblue-hover);
+  line-height: 1.5;
+}
+
+@media (max-width: 999px) {
+  .goals {
+    border-bottom: 1px solid var(--transblue);
+  }
+}
+
+@media (min-width: 1000px) {
+  .goals {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 100%;
+    border-right: 1px solid var(--transblue);
+  }
+
+  .task {
+    padding-left: 400px;
+    min-height: 100vh;
+  }
 }
 
 ol {
@@ -152,8 +183,9 @@ ol li:not(:last-of-type) {
 }
 
 .goals pre {
-  background: #222;
+  background: #000;
   padding: 10px;
+  border-radius: 4px;
 }
 
 li {
@@ -164,7 +196,7 @@ button {
   cursor: pointer;
 }
 
-body > a[href^="level"] {
+.task > a[href^="level"] {
   background: var(--transdblue-hover);
   padding: 10px 24px;
   border-radius: 24px;
@@ -173,6 +205,6 @@ body > a[href^="level"] {
   transition: background-color 0.15s ease;
 }
 
-body > a[href^="level"]:hover {
+.task > a[href^="level"]:hover {
   background-color: var(--transdblue);
 }

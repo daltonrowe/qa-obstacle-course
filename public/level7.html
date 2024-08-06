@@ -11,7 +11,7 @@
     <meta name="description" content="focus, blur, input" />
   </head>
   <body>
-    <ol class="box goals">
+    <ol class="goals">
       <li>Focus the input, assert the text "Focusing" is on the page.</li>
       <li>
         Blur (unfocus) the input, assert the text "Blurred" is on the page.
@@ -21,11 +21,13 @@
       </li>
     </ol>
 
-    <input type="number" />
+    <div class="task">
+      <input type="number" />
 
-    <pre>...</pre>
+      <pre>...</pre>
 
-    <a href="level8">Ahoy</a>
+      <a href="level8">Ahoy</a>
+    </div>
 
     <script>
       const input = document.querySelector("input");

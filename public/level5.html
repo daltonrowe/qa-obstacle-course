@@ -11,17 +11,19 @@
     <meta name="description" content="hidden elements" />
   </head>
   <body>
-    <ol class="box goals">
+    <ol class="goals">
       <li>Assert there is a hidden element with an id of "not-me".</li>
       <li>Click the button.</li>
       <li>Assert the element with id "not-me" is visible.</li>
     </ol>
 
-    <div id="not-me" style="display: none">🫣</div>
+    <div class="task">
+      <div id="not-me" style="display: none">🫣</div>
 
-    <button id="reveal">🕵️</button>
+      <button id="reveal">🕵️</button>
 
-    <a href="level6">Onwards</a>
+      <a href="level6">Onwards</a>
+    </div>
 
     <script>
       const reveal = document.querySelector("#reveal");
