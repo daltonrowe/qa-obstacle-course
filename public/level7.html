@@ -11,17 +11,22 @@
     <meta name="description" content="focus, blur, input" />
   </head>
   <body>
-    <ol class="goals">
-      <li>Focus the input, assert the text "Focusing" is on the page.</li>
-      <li>
-        Blur (unfocus) the input, assert the text "Blurred" is on the page.
-      </li>
-      <li>
-        Insert "4321" into the input, assert the text "Woo hoo!" is on the page.
-      </li>
-    </ol>
+    <div id="goal">
+      <h1>Focus</h1>
 
-    <div class="task">
+      <ol>
+        <li>Focus the input, assert the text "Focusing" is on the page.</li>
+        <li>
+          Blur (unfocus) the input, assert the text "Blurred" is on the page.
+        </li>
+        <li>
+          Insert "4321" into the input, assert the text "Woo hoo!" is on the
+          page.
+        </li>
+      </ol>
+    </div>
+
+    <div id="task">
       <input type="number" />
 
       <pre>...</pre>

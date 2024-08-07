@@ -11,13 +11,17 @@
     <meta name="description" content="clear input, readonly input" />
   </head>
   <body>
-    <ol class="goals">
-      <li>Clear out all text in the first input.</li>
-      <li>Assert the input is empty.</li>
-      <li>Assert the second input is NOT editable.</li>
-    </ol>
+    <div id="goal">
+      <h1>Readonly</h1>
 
-    <div class="task">
+      <ol>
+        <li>Clear out all text in the first input.</li>
+        <li>Assert the input is empty.</li>
+        <li>Assert the second input is NOT editable.</li>
+      </ol>
+    </div>
+
+    <div id="task">
       <input type="text" value="hey i'm inputting here" />
 
       <input type="text" value="don't mess with me ya hear" readonly />

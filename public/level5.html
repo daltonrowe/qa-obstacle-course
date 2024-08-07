@@ -11,13 +11,16 @@
     <meta name="description" content="hidden elements" />
   </head>
   <body>
-    <ol class="goals">
-      <li>Assert there is a hidden element with an id of "not-me".</li>
-      <li>Click the button.</li>
-      <li>Assert the element with id "not-me" is visible.</li>
-    </ol>
+    <div id="goal">
+      <h1>Visibility</h1>
+      <ol>
+        <li>Assert there is a hidden element with an id of "not-me".</li>
+        <li>Click the button.</li>
+        <li>Assert the element with id "not-me" is visible.</li>
+      </ol>
+    </div>
 
-    <div class="task">
+    <div id="task">
       <div id="not-me" style="display: none">🫣</div>
 
       <button id="reveal">🕵️</button>

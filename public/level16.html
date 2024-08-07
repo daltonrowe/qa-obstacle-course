@@ -11,30 +11,34 @@
     <meta name="description" content="query params" />
   </head>
   <body>
-    <ol class="goals">
-      <li>
-        Assert that a GET request to "/api/level15" returns a 400 status code.
-      </li>
-      <li>
-        Assert that a POST request to "/api/level15" returns a 200 status code.
-      </li>
-      <li>
-        Assert that a POST request to "/api/level15" with the following JSON:
-        <pre>
+    <div id="goal">
+      <h1>Post Body</h1>
+      <ol>
+        <li>
+          Assert that a GET request to "/api/level15" returns a 400 status code.
+        </li>
+        <li>
+          Assert that a POST request to "/api/level15" returns a 200 status
+          code.
+        </li>
+        <li>
+          Assert that a POST request to "/api/level15" with the following JSON:
+          <pre>
 {
   "greeting": "Good morning"
 }</pre
-        >
-        returns:
-        <pre>
+          >
+          returns:
+          <pre>
 {
   "greeting": "Hiya~!" 
 }</pre
-        >
-      </li>
-    </ol>
+          >
+        </li>
+      </ol>
+    </div>
 
-    <div class="task">
+    <div id="task">
       <a href="level17">🎺</a>
     </div>
   </body>

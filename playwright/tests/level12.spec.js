@@ -3,7 +3,7 @@ import { test, expect } from "@playwright/test";
 
 test('has h1 with banner role', async ({ page }) => {
   await page.goto('level12');
-  const header = page.locator('h1');
+  const header = page.locator('h2');
   await expect(header).toHaveRole('banner')
 });
 

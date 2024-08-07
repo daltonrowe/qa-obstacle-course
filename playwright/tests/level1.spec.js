@@ -6,9 +6,9 @@ test('has title', async ({ page }) => {
   await expect(page).toHaveTitle("Level 1");
 });
 
-test('has h1 with correct text', async ({ page }) => {
+test('has h2 with correct text', async ({ page }) => {
   await page.goto('level1');
-  const heading = page.getByRole('heading')
+  const heading = page.locator('h2')
   await expect(heading).toHaveText('Hey There!')
 });
 
