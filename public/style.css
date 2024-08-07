@@ -147,6 +147,11 @@ p {
 #goal {
   background: var(--transdblue-hover);
   line-height: 1.5;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   h1 {
     padding: var(--size2) var(--size3);
@@ -171,6 +176,7 @@ p {
     padding: 10px;
     border-radius: 4px;
     font-size: var(--font1);
+    overflow: hidden;
   }
 }
 
@@ -184,6 +190,18 @@ p {
 
     li {
       font-size: var(--font1);
+    }
+  }
+}
+
+@media (max-width: 649px) {
+  #goal {
+    h1 {
+      padding: var(--size1) var(--size2);
+    }
+
+    li {
+      padding: var(--size1) var(--size2);
     }
   }
 }
