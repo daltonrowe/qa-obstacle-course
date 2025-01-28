@@ -35,6 +35,10 @@ https://playwright.dev/docs/locators
 
 #### To Do
 
+- API POST JSON vs Form Data
+- API Headers
+- Basic Auth
+
 - Breakpoints
 - Does not have scroll bar
 - Div overlaying element / force click / programmatic click
