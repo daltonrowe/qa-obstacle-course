@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+
+  <title>Level 18</title>
+  <meta name="description" content="content type headers" />
+</head>
+
+<body>
+  <div id="goal">
+    <h1>Content Type Headers</h1>
+    <ol>
+      <li>
+        Assert that a POST request to "/api/level18" returns a 200 status code.
+      </li>
+      <li>
+        Assert that a POST request to "/api/level18" with a header of "Content-Type" with a value of "text/plain", and
+        body of "Just plain ol talkin" returns the
+        response:
+        <pre>Understood.</pre>
+      </li>
+      <li>
+        Assert that a POST request to "/api/level18" with header of "Content-Type" with a value of "application/json",
+        and body of:
+        <pre>{
+  "how": "about this?"
+}</pre> returns
+        the response:
+        <pre>
+{
+  "Yup": "got it"
+}</pre>
+      </li>
+    </ol>
+  </div>
+
+  <div id="task">
+    <a href="level19">🎺</a>
+  </div>
+</body>
+
+</html>

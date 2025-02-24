@@ -2,6 +2,7 @@ import * as fs from "node:fs";
 import express from "express";
 const app = express();
 
+app.use(express.text());
 app.use(express.json());
 app.use(
   express.urlencoded({

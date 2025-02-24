@@ -9,20 +9,20 @@ test("has 200 for a GET request", async ({ request }) => {
 
 test("has a plain text response", async ({ request }) => {
   const response = await request.get("/api/level17", {
-    headers: { "Accept": "text/plain" }
+    headers: { Accept: "text/plain" },
   });
 
-  const text = await response.text()
+  const text = await response.text();
 
   expect(text).toBe("Here's some plain text!");
 });
 
 test("has a json response", async ({ request }) => {
   const response = await request.get("/api/level17", {
-    headers: { "Accept": "application/json" }
+    headers: { Accept: "application/json" },
   });
 
-  const json = await response.json()
+  const json = await response.json();
 
-  expect(json).toEqual({ "Hereees": 'json!' });
+  expect(json).toEqual({ Hereees: "json!" });
 });
