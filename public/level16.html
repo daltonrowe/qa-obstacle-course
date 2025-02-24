@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Level 16</title>
-    <meta name="description" content="query params" />
-  </head>
-  <body>
-    <div id="goal">
-      <h1>Post Body</h1>
-      <ol>
-        <li>
-          Assert that a GET request to "/api/level16" returns a 400 status code.
-        </li>
-        <li>
-          Assert that a POST request to "/api/level16" returns a 200 status
-          code.
-        </li>
-        <li>
-          Assert that a POST request to "/api/level16" with the following JSON:
-          <pre>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+
+  <title>Level 16</title>
+  <meta name="description" content="post data" />
+</head>
+
+<body>
+  <div id="goal">
+    <h1>Post Body</h1>
+    <ol>
+      <li>
+        Assert that a GET request to "/api/level16" returns a 400 status code.
+      </li>
+      <li>
+        Assert that a POST request to "/api/level16" returns a 200 status
+        code.
+      </li>
+      <li>
+        Assert that a POST request to "/api/level16" with the following JSON:
+        <pre>
 {
   "greeting": "Good morning"
-}</pre
-          >
-          returns:
-          <pre>
+}</pre>
+        returns:
+        <pre>
 {
   "greeting": "Hiya~!" 
-}</pre
-          >
-        </li>
-      </ol>
-    </div>
+}</pre>
+      </li>
+    </ol>
+  </div>
 
-    <div id="task">
-      <a href="level17">🎺</a>
-    </div>
-  </body>
+  <div id="task">
+    <a href="level17">🎺</a>
+  </div>
+</body>
+
 </html>

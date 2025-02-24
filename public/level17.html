@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+
+  <title>Level 17</title>
+  <meta name="description" content="accepts headers" />
+</head>
+
+<body>
+  <div id="goal">
+    <h1>Accept Headers</h1>
+    <ol>
+      <li>
+        Assert that a GET request to "/api/level17" returns a 200 status code.
+      </li>
+      <li>
+        Assert that a GET request to "/api/level17" with a header of "Accepts" with a value of "text/plain" returns the
+        response:
+        <pre>Here's some plain text!</pre>
+      </li>
+      <li>
+        Assert that a GET request to "/api/level17" with header of "Accepts" with a value of "application/json" returns
+        the response:
+        <pre>
+{
+  "Hereees": "json!"
+}</pre>
+      </li>
+    </ol>
+  </div>
+
+  <div id="task">
+    <a href="level17">🎺</a>
+  </div>
+</body>
+
+</html>
