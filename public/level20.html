@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+
+  <title>Level 20</title>
+  <meta name="description" content="authorization" />
+</head>
+
+<body>
+  <div id="goal">
+    <h1>Authorization</h1>
+    <ol>
+      <li>
+        Assert that a GET request to "/api/level20" returns a 401 status code.
+      </li>
+      <li>
+        Assert that a GET request to "/api/level20" with a "X-Api-Key" header with a value of "mysupercoolapikey",
+        returns:
+        <pre>Approved!</pre>
+      </li>
+      <li>
+        Assert that a GET request to "/api/level20" with an "Authorization" header of "Basic
+        Q3VyaW91c0dlb3JnZTp5ZWxsb3doYXQ=,
+        returns:
+        <pre>Welcome Mr. George.</pre>
+      </li>
+    </ol>
+  </div>
+
+  <div id="task">
+    <a href="level21">🔑</a>
+  </div>
+</body>
+
+</html>
